@@ -29,4 +29,4 @@ COPY entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/net_speeder
 
-ENTRYPOINT ["python /root/ssr/shadowsocks/server.py -s 0.0.0.0 -p 8388 -m chacha20-ietf -k $SSRPASS -o tls1.2_ticket_auth -O auth_aes128_sha1"]
+#ENTRYPOINT ["python /root/ssr/shadowsocks/server.py -s 0.0.0.0 -p 8388 -m chacha20-ietf -k $SSRPASS -o tls1.2_ticket_auth -O auth_aes128_sha1"]
