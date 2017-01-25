@@ -1,6 +1,6 @@
 # shadowsocksr-net-speeder 
-FROM ubuntu:14.04.5
-MAINTAINER lnterface [https://github.com/lnterface/ssr-with-net_speeder]
+FROM ubuntu:16.04
+MAINTAINER lnterface [https://github.com/suifeng/ssr-with-net_speeder]
 RUN apt-get update && \
     apt-get install -y pwgen wget python python-pip python-m2crypto libnet1-dev libpcap0.8-dev git gcc openssh-server && \
     apt-get clean all
@@ -29,4 +29,4 @@ COPY entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/net_speeder
 
-ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
+ENTRYPOINT "/usr/local/bin/entrypoint.sh"
