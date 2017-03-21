@@ -18,7 +18,7 @@ echo "========================================================================"
 
 nohup /usr/sbin/sshd -D &
 nohup /usr/local/bin/net_speeder eth0 "ip" >/dev/null 2>&1 &
-/etc/init.d/redis-server start &
-sleep 10
-ntopng  --community --daemon &
+#/etc/init.d/redis-server start &
+#sleep 10
+#ntopng  --community --daemon &
 python /root/ssr/shadowsocks/server.py -s 0.0.0.0 -p 8388 -m chacha20-ietf -k $SSR_PASS -o tls1.2_ticket_auth -O auth_aes128_sha1
