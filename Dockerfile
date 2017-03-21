@@ -30,13 +30,13 @@ RUN chmod +x /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/net_speeder
 
 #ntopng
-RUN wget http://packages.ntop.org/apt/14.04/all/apt-ntop.deb && \
-    sudo dpkg -i apt-ntop.deb && \
-    rm -rf apt-ntop.deb && \
-    apt-get update && \
-    apt-get -y -q install ntopng redis-server libpcap0.8 libmysqlclient18 && \
-    apt-get clean all && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+#RUN wget http://packages.ntop.org/apt/14.04/all/apt-ntop.deb && \
+#    sudo dpkg -i apt-ntop.deb && \
+#    rm -rf apt-ntop.deb && \
+#    apt-get update && \
+#    apt-get -y -q install ntopng redis-server libpcap0.8 libmysqlclient18 && \
+#    apt-get clean all && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
     
-EXPOSE 3000
+#EXPOSE 3000
 
 ENTRYPOINT "/usr/local/bin/entrypoint.sh"
